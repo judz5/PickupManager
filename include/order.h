@@ -13,3 +13,28 @@ for things like date.
 
 
 */
+
+#include <string>
+
+
+class Order {
+
+    public:
+        Order(const std::string name,std::string location, std::string pickupDate, const std::string storageDate);
+
+        std::string getLocation() const;
+        std::string getName() const;
+        std::string getStorageDate() const;
+        std::string getPickupDate() const;
+
+        // std::int getDaysSince 
+
+    private:
+        std::string name;
+        std::string location;
+        std::string pickupDate;
+        std::string storageDate;
+
+
+};
+
