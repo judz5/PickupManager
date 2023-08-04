@@ -22,10 +22,14 @@ class Order {
     public:
         Order(const std::string name,std::string location, std::string pickupDate, const std::string storageDate);
 
-        std::string getLocation() const;
+        std::string getLocation() const; // this may have to become a
         std::string getName() const;
         std::string getStorageDate() const;
         std::string getPickupDate() const;
+
+        void setLocation();
+        void setName();
+        void setPickupDate();
 
         // std::int getDaysSince 
 
