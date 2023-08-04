@@ -4,4 +4,4 @@
 ### A Management system for Pickup order management.
 
 #
-Trying to learn some c++ before semester. Simple-ish project, but so far c++ is weird.
+Trying to learn some c++ before semester. c++ is weird.
