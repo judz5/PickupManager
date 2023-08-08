@@ -14,22 +14,23 @@ for things like date.
 
 */
 
+#ifndef ORDER_H
+#define ORDER_H
 #include <string>
 
 
 class Order {
 
     public:
-        Order(const string& _name, string& _location, string& _pickupDate);
+        Order(const std::string& _name, std::string& _location, std::string& _pickupDate);
 
-        std::string getLocation() const; // this may have to become a
+        std::string getLocation() const; 
         std::string getName() const;
         std::string getStorageDate() const;
         std::string getPickupDate() const;
 
-        void setLocation();
-        void setPickupDate();
-
+        void setLocation(std::string& _location);
+        void setPickupDate(std::string& _pickupDate);
         int daysInStorage();
 
     private:
@@ -41,3 +42,4 @@ class Order {
 
 };
 
+#endif

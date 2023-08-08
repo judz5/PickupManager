@@ -5,51 +5,43 @@
 
 using namespace std;
 
-class Order{
+Order::Order(const string& _name, string& _location, string& _pickupDate) :
+    name(_name), location(_location), pickupDate(_pickupDate) {
+   
+    // setting current time to storageDate
+    std::time_t currentTime = std::time(nullptr); // get curr time in seconds since epoch
+    std::string currentTimeStr = std::ctime(&currentTime); // convert to string formatting
+    storageDate = currentTimeStr;
+}
 
-    private:
-        string name;
-        string location;
-        string pickupDate;
-        string storageDate;
+void Order::setPickupDate(string& _pickupDate){
+    pickupDate = _pickupDate;
+}
 
-    public:
-        Order(const string& _name, string& _location, string& _pickupDate){
-            name = _name;
-            location = _location;
-            pickupDate = _pickupDate;
-            
-            // setting current time to storageDate
-            std::time_t currentTime = std::time(nullptr); // get curr time in seconds since epoch
-            std::string currentTimeStr = std::ctime(&currentTime); // convert to string formatting
-            pickupDate = currentTimeStr;
-        }
+void Order::setLocation(string& _location){
+    location = _location;
+}
 
-        void setPickupDate(string& _pickupDate){
-            pickupDate = _pickupDate;
-        }
+string Order::getName() const{
+    return name;
+}
 
-        void setLocation(string& _location){
-            location = _location;
-        }
+string Order::getLocation() const{
+    return location;
+}
 
-        string getName() const{
-            return name;
-        }
+string Order::getPickupDate() const{
+    return pickupDate;
+}
 
-        string getLocation() const{
-            return location;
-        }
+string Order::getStorageDate() const{
+    return storageDate;
+}
 
-        string getPickupDate() const{
-            return pickupDate;
-        }
-
-
-        int daysInStorage(){
-            // this will return, storageDate - pickupDate
-            // will have to format the strings into date values i can work with
-        }
+int Order::daysInStorage(){
+    // this will return, storageDate - pickupDate
+    // will have to format the strings into date values i can work with
+    return 0;
+}
 
 
-};
