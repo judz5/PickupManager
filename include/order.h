@@ -20,7 +20,7 @@ for things like date.
 class Order {
 
     public:
-        Order(const std::string name,std::string location, std::string pickupDate, const std::string storageDate);
+        Order(const string& _name, string& _location, string& _pickupDate);
 
         std::string getLocation() const; // this may have to become a
         std::string getName() const;
@@ -28,10 +28,9 @@ class Order {
         std::string getPickupDate() const;
 
         void setLocation();
-        void setName();
         void setPickupDate();
 
-        // std::int getDaysSince 
+        int daysInStorage();
 
     private:
         std::string name;
