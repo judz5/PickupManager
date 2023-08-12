@@ -14,11 +14,24 @@ void makeFile(const Order& _order){
     file.close();
 }
 
+void menu(){
+    cout << "Welcome to PickupManager" << endl;
+    cout << "---------------------------------------\n\n";
+    cout << "1. Add New Pickup\n";
+    cout << "2. Search Pickups\n";
+    cout << "3. Edit Pickup\n";
+    cout << "4. Exit\n";
+
+    int selection;
+    cout << "Enter Selection: ";
+    cin >> selection;
+}
 
 // Main interface and function running from here
 
 int main()
 {
+    /*
 
     string name; string location; string pickupDate;
 
@@ -40,4 +53,9 @@ int main()
     cout << "\nCreating order file" << endl;
     makeFile(order);
     cout << "File Created";
+
+    */
+
+   menu();
+
 }
