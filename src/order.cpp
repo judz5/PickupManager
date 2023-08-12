@@ -9,9 +9,11 @@ Order::Order(const string& _name, string& _location, string& _pickupDate) :
     name(_name), location(_location), pickupDate(_pickupDate) {
    
     // setting current time to storageDate
-    std::time_t currentTime = std::time(nullptr); // get curr time in seconds since epoch
-    std::string currentTimeStr = std::ctime(&currentTime); // convert to string formatting
-    storageDate = currentTimeStr;
+    const int MAXLEN = 80;
+    char s[MAXLEN];
+    time_t t = time(0);
+    strftime(s, MAXLEN, "%m/%d/%Y", localtime(&t));
+    storageDate = s;
 }
 
 void Order::setPickupDate(string& _pickupDate){

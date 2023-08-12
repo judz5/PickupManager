@@ -33,12 +33,12 @@ class Order {
         void setPickupDate(std::string& _pickupDate);
         int daysInStorage();
 
+
     private:
         std::string name;
         std::string location;
         std::string pickupDate;
         std::string storageDate;
-
 
 };
 
